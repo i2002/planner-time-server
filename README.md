@@ -9,7 +9,7 @@ This project represents the server part of the application.
 A gnome GUI client can be fount [here](https://gitlab.com/i2002/planner-gnome-client)
 
 ## Installation
-### Requirements:
+### Requirements
 - `python 3`
 - `websockets` python module
 
@@ -22,14 +22,14 @@ A gnome GUI client can be fount [here](https://gitlab.com/i2002/planner-gnome-cl
 `python <path-to-project>/planner.py`
 
 ## Connection details
-**Sent messages**
+### Sent messages
 - `init` timer state and tasks
 - `timer` sends to clients JSON objects with current state, pause state, time and info
 - `task_add` name of the added task
 - `task_remove` name of the removed task
 
-**Received messages**\
-(structure: `action` and `value`)
+### Received messages
+*(structure: `action` and `value`)*
 - `timer_start`, along with the name of the current task - starts the pomodoro timer
 - `timer_end` - ends the pomodoro timer
 - `timer_toggle` - pauses / resumes the pomodoro timer
