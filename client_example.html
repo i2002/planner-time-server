@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket demo</title>
+    </head>
+    <body>
+        <h1 id="time">--:--</h1>
+        <script>
+            var ws = new WebSocket("ws://127.0.0.1:6789/"),
+            messages = document.createElement('ul');
+            ws.onmessage = function (event) {
+                json = JSON.parse(event.data);
+                if(json.type == "timer")
+                {
+                    document.getElementById("time").innerText = json.time;
+                    return;
+                }
+                var messages = document.getElementsByTagName('ul')[0],
+                    message = document.createElement('li'),
+                    content = document.createTextNode(event.data);
+                message.appendChild(content);
+                messages.appendChild(message);
+            };
+            document.body.appendChild(messages);
+        </script>
+    </body>
+</html>
