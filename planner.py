@@ -9,10 +9,11 @@ import os
 
 # Data
 CONFIG = {
-    'work': 20,
-    'break': 10,
+    'work': 3000, # time in seconds
+    'break': 600,
     'ip': 'localhost',
-    'port': 6789
+    'port': 6789,
+    'locale': 'en_US.UTF-8' # used by idle info display
 }
 
 TIMER = {
@@ -215,8 +216,8 @@ def get_timer_info():
 
 # Main
 async def main():
-    subprocess.Popen(["play", os.path.dirname(os.path.realpath(__file__)) + "/deskbell.wav"])
-    locale.setlocale(locale.LC_TIME, "ro_RO.UTF-8")
+    subprocess.Popen(['play', os.path.dirname(os.path.realpath(__file__)) + '/deskbell.wav'])
+    locale.setlocale(locale.LC_TIME, CONFIG['locale'])
     await websockets.serve(connection, CONFIG['ip'], CONFIG['port'])
     await timer()
 
