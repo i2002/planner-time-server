@@ -14,7 +14,7 @@ A gnome GUI **client** can be found [here](https://gitlab.com/i2002/planner-gnom
 - `websockets` python module
 
 ### Config
-(at the top of `planner.py` file)
+In the config file `config.json` (create one using `cp config-example.json config.json`)
 - websocket IP and port (set up according to your environment)
 - the work and break duration
 - the locale for timer idle info
