@@ -2,11 +2,13 @@
 
 ## About
 Planner is a simple centralized time management tool.
-It combines the the [Pomodoro technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) and a simple Todo list.
+It combines the [Pomodoro technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) and a simple Todo list.
 
 It works by having clients connect to a time server via websockets.
 This project represents the **server** part of the application.
-A gnome GUI **client** can be found [here](https://gitlab.com/i2002/planner-gnome-client).
+
+- A gnome GUI **client** can be found [here](https://gitlab.com/i2002/planner-gnome-client).
+- A Cinnamon applet **client** can be found [here](https://gitlab.com/i2002/planner-cinnamon-applet)
 
 ## Installation
 ### Requirements
