@@ -7,15 +7,15 @@ import subprocess
 import os
 
 
-# Data
-CONFIG = {
-    'work': 3000, # time in seconds
-    'break': 600,
-    'ip': 'localhost',
-    'port': 6789,
-    'locale': 'en_US.UTF-8' # used by idle info display
-}
+# Load configuration file
+config_file = os.path.dirname(os.path.realpath(__file__)) + '/config.json'
+if(not os.path.exists(config_file)):
+    print("Configuration file 'config.json' not found!")
+    quit()
 
+CONFIG = json.load(open(config_file))
+
+# Data
 TIMER = {
     'state': -1, # -1: not started, 0: work, 1: break
     'pause': False,

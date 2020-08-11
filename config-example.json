@@ -1,0 +1,7 @@
+{
+    "work": 3000,
+    "break": 600,
+    "ip": "localhost",
+    "port": 6789,
+    "locale": "en_US.UTF-8"
+}
